@@ -1,0 +1,26 @@
+{
+	"schemaVersion": 1,
+	"id": "frameboost",
+	"version": "${version}",
+	"name": "Frame Boost",
+	"description": "less stutter on weak cpus. the game stops handing its cpu core away every frame and gets a higher priority than background apps.",
+	"authors": ["wysss"],
+	"license": "All-Rights-Reserved",
+	"icon": "assets/frameboost/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["dev.frbs.FrBs"]
+	},
+	"mixins": [
+		{
+			"config": "frameboost.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"fabric-api": "*",
+		"minecraft": ">=1.21.11 <1.22",
+		"java": ">=21"
+	}
+}
